@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Avalie seu Carro — Rafa Top Car</title>
+<meta name="description" content="Avalie o seu carro para troca na Rafa Top Car. Preencha os dados e envie diretamente pelo WhatsApp.">
+<link rel="icon" href="assets/rafa-logo.jpg">
+<style>
+body{margin:0;background:#0b0b0b;font-family:Inter,system-ui,sans-serif}
+.rtc-h1,.rtc-h2,.rtc-h3{font-family:Oswald,sans-serif;text-transform:uppercase;margin:0}
+.rtc-btn{border:none;cursor:pointer;font-family:Inter,sans-serif;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.rtc-field{background:#0f0f0f;border:1px solid #333;color:#eee;font-size:14px;padding:12px 14px;border-radius:6px;font-family:Inter,sans-serif;width:100%;box-sizing:border-box}
+.rtc-field::placeholder{color:#666}
+.rtc-label{color:#bbb;font-size:12px;font-weight:600;margin-bottom:6px;display:block}
+a{color:#d81f26}
+a:hover{color:#ef4b4b}
+</style>
+</helmet>
+
+<div style="background:#0b0b0b;min-height:100vh">
+
+<header style="display:flex;align-items:center;justify-content:space-between;padding:14px clamp(16px,4vw,40px);background:#0b0b0b;border-bottom:1px solid #262626;flex-wrap:wrap;gap:12px;row-gap:12px">
+<div style="display:flex;align-items:center;gap:12px">
+<img src="assets/rafa-logo.jpg" alt="Rafa Top Car" style="height:44px;width:44px;object-fit:cover;border-radius:50%;border:2px solid #d81f26">
+<div class="rtc-h2" style="color:#fff;font-size:17px">RAFA TOP CAR</div>
+</div>
+<nav style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;row-gap:10px">
+<a href="index.html" style="text-decoration:none;color:#eee;font-size:14px;font-weight:600">Estoque</a>
+<a href="Rafa Top Car - Avalie seu Carro.dc.html" style="text-decoration:none;color:#eee;font-size:14px;font-weight:600;border-bottom:2px solid #d81f26;padding-bottom:4px">Avalie seu Carro</a>
+<a href="Rafa Top Car - Contacto.dc.html" style="text-decoration:none;color:#eee;font-size:14px;font-weight:600">Contacto</a>
+<a href="https://wa.me/351912910662?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rafa%20Top%20Car%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="rtc-btn" style="background:#25D366;color:#fff;padding:9px 18px;border-radius:24px;font-size:13px;text-decoration:none"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" style="width:16px;height:16px">912 910 662</a>
+</nav>
+</header>
+
+<section style="padding:34px clamp(16px,4vw,40px) 8px;text-align:center">
+<div class="rtc-h1" style="color:#fff;font-size:30px">AVALIE O SEU CARRO NA TROCA</div>
+<p style="color:#999;font-size:14px;margin:8px 0 0">Preencha os dados abaixo e envie diretamente para o nosso WhatsApp ✨</p>
+</section>
+
+<section style="max-width:640px;margin:0 auto;padding:24px clamp(16px,4vw,40px) 60px">
+<div style="background:#161616;border:1px solid #262626;border-radius:10px;padding:clamp(18px,4vw,28px);display:flex;flex-direction:column;gap:18px">
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+<div><label class="rtc-label">Marca</label><input class="rtc-field" placeholder="Ex: Renault" value="{{ marca }}" onChange="{{ setMarca }}"></div>
+<div><label class="rtc-label">Modelo</label><input class="rtc-field" placeholder="Ex: Clio 1.5 dCi" value="{{ modelo }}" onChange="{{ setModelo }}"></div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+<div><label class="rtc-label">Ano</label><input class="rtc-field" placeholder="Ex: 2019" value="{{ ano }}" onChange="{{ setAno }}"></div>
+<div><label class="rtc-label">Quilometragem</label><input class="rtc-field" placeholder="Ex: 78.000 km" value="{{ km }}" onChange="{{ setKm }}"></div>
+</div>
+
+<div>
+<label class="rtc-label">Estado geral</label>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<div onClick="{{ setEstadoOtimo }}" style="flex:1;text-align:center;padding:11px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;background:{{ estadoOtimoBg }};color:{{ estadoOtimoColor }};border:1px solid #333">Ótimo</div>
+<div onClick="{{ setEstadoBom }}" style="flex:1;text-align:center;padding:11px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;background:{{ estadoBomBg }};color:{{ estadoBomColor }};border:1px solid #333">Bom</div>
+<div onClick="{{ setEstadoRazoavel }}" style="flex:1;text-align:center;padding:11px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;background:{{ estadoRazoavelBg }};color:{{ estadoRazoavelColor }};border:1px solid #333">Razoável</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+<div><label class="rtc-label">O seu nome</label><input class="rtc-field" placeholder="Nome completo" value="{{ nome }}" onChange="{{ setNome }}"></div>
+<div><label class="rtc-label">Telefone / WhatsApp</label><input class="rtc-field" placeholder="912 345 678" value="{{ telefone }}" onChange="{{ setTelefone }}"></div>
+</div>
+
+<div><label class="rtc-label">Observações</label><textarea class="rtc-field" rows="3" placeholder="Alguma informação extra sobre o carro..." value="{{ obs }}" onChange="{{ setObs }}"></textarea></div>
+
+<div>
+<label class="rtc-label">Fotos do carro</label>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:8px">
+<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="avalia-foto-1" shape="rounded" radius="8" placeholder="Foto 1" style="aspect-ratio:1" hint-size="100%,100%"></x-import>
+<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="avalia-foto-2" shape="rounded" radius="8" placeholder="Foto 2" style="aspect-ratio:1" hint-size="100%,100%"></x-import>
+<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="avalia-foto-3" shape="rounded" radius="8" placeholder="Foto 3" style="aspect-ratio:1" hint-size="100%,100%"></x-import>
+<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="avalia-foto-4" shape="rounded" radius="8" placeholder="Foto 4" style="aspect-ratio:1" hint-size="100%,100%"></x-import>
+</div>
+</div>
+
+<a href="{{ waLink }}" target="_blank" rel="noopener" class="rtc-btn" style="background:#25D366;color:#fff;padding:15px;border-radius:8px;font-size:15px;text-decoration:none;margin-top:8px">📲 Enviar avaliação pelo WhatsApp</a>
+<p style="color:#666;font-size:12px;text-align:center;margin:0">Vamos abrir o WhatsApp com os dados já preenchidos para você confirmar o envio.</p>
+
+</div>
+</section>
+
+<footer style="padding:20px clamp(16px,4vw,40px);background:#0b0b0b;text-align:center;color:#888;font-size:12px;border-top:1px solid #262626">
+Rua Dr António dos Santos 81, 3850-830 Santo António de Vagos · 912 910 662
+</footer>
+
+<a href="https://wa.me/351912910662?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rafa%20Top%20Car%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" style="position:fixed;right:20px;bottom:20px;z-index:50;background:#25D366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.4)"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" style="width:28px;height:28px"></a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    marca: '',
+    modelo: '',
+    ano: '',
+    km: '',
+    estado: 'Bom',
+    nome: '',
+    telefone: '',
+    obs: ''
+  };
+
+  buildMessage() {
+    const s = this.state;
+    const lines = [
+      'Olá! Quero avaliar o meu carro para troca na Rafa Top Car:',
+      s.marca || s.modelo ? `Carro: ${s.marca} ${s.modelo}`.trim() : null,
+      s.ano ? `Ano: ${s.ano}` : null,
+      s.km ? `Km: ${s.km}` : null,
+      `Estado geral: ${s.estado}`,
+      s.nome ? `Nome: ${s.nome}` : null,
+      s.telefone ? `Telefone: ${s.telefone}` : null,
+      s.obs ? `Observações: ${s.obs}` : null
+    ].filter(Boolean);
+    return lines.join('\n');
+  }
+
+  renderVals() {
+    const s = this.state;
+    const waLink = 'https://wa.me/351912910662?text=' + encodeURIComponent(this.buildMessage());
+    const estadoStyle = (val) => ({
+      Bg: s.estado === val ? '#d81f26' : '#0f0f0f',
+      Color: s.estado === val ? '#fff' : '#ccc'
+    });
+    const otimo = estadoStyle('Ótimo');
+    const bom = estadoStyle('Bom');
+    const razoavel = estadoStyle('Razoável');
+
+    return {
+      marca: s.marca,
+      modelo: s.modelo,
+      ano: s.ano,
+      km: s.km,
+      nome: s.nome,
+      telefone: s.telefone,
+      obs: s.obs,
+      setMarca: (e) => this.setState({ marca: e.target.value }),
+      setModelo: (e) => this.setState({ modelo: e.target.value }),
+      setAno: (e) => this.setState({ ano: e.target.value }),
+      setKm: (e) => this.setState({ km: e.target.value }),
+      setNome: (e) => this.setState({ nome: e.target.value }),
+      setTelefone: (e) => this.setState({ telefone: e.target.value }),
+      setObs: (e) => this.setState({ obs: e.target.value }),
+      setEstadoOtimo: () => this.setState({ estado: 'Ótimo' }),
+      setEstadoBom: () => this.setState({ estado: 'Bom' }),
+      setEstadoRazoavel: () => this.setState({ estado: 'Razoável' }),
+      estadoOtimoBg: otimo.Bg,
+      estadoOtimoColor: otimo.Color,
+      estadoBomBg: bom.Bg,
+      estadoBomColor: bom.Color,
+      estadoRazoavelBg: razoavel.Bg,
+      estadoRazoavelColor: razoavel.Color,
+      waLink
+    };
+  }
+}
+</script>
+</body>
+</html>

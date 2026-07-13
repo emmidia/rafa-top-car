@@ -1,0 +1,79 @@
+{
+  "vehicles": [
+    {
+      "id": "smart-fortwo-2001",
+      "name": "Smart Fortwo Coupé",
+      "brand": "Smart",
+      "category": "Carros",
+      "fuel": "Diesel",
+      "year": 2001,
+      "month": 3,
+      "km": 276000,
+      "price": 2499,
+      "badge": "GARANTIA",
+      "gearbox": "Automática",
+      "power": "41 CV",
+      "color": "Preto",
+      "seats": 2,
+      "equipment": ["Teto panorâmico", "Vidro elétrico", "Direção hidráulica"],
+      "photos": ["assets/cars/smart-fortwo-photo.jpg"],
+      "sold": false
+    },
+    {
+      "id": "bmw-116d-2010",
+      "name": "BMW 116D 2.0",
+      "brand": "BMW",
+      "category": "Carros",
+      "fuel": "Diesel",
+      "year": 2010,
+      "km": 262000,
+      "price": 8500,
+      "badge": "TOP",
+      "equipment": [],
+      "photos": ["assets/cars/bmw-116d-photo.webp"],
+      "sold": false
+    },
+    {
+      "id": "honda-cbf125-2023",
+      "name": "Honda CBF 125",
+      "brand": "Honda",
+      "category": "Motas",
+      "fuel": "Gasolina",
+      "year": 2023,
+      "km": 65000,
+      "price": 2499,
+      "badge": "NOVO",
+      "equipment": [],
+      "photos": ["assets/cars/honda-cbf125-photo.webp"],
+      "sold": false
+    },
+    {
+      "id": "renault-megane-2007",
+      "name": "Renault Megane II Break",
+      "brand": "Renault",
+      "category": "Carros",
+      "fuel": "Diesel",
+      "year": 2007,
+      "km": 240000,
+      "price": 3500,
+      "badge": "GARANTIA",
+      "equipment": [],
+      "photos": ["assets/cars/renault-megane-photo.jpg"],
+      "sold": false
+    },
+    {
+      "id": "peugeot-16hdi-2010",
+      "name": "Peugeot 1.6 HDi Sport",
+      "brand": "Peugeot",
+      "category": "Carros",
+      "fuel": "Diesel",
+      "year": 2010,
+      "km": 157000,
+      "price": 7900,
+      "badge": "TOP",
+      "equipment": [],
+      "photos": ["assets/cars/peugeot-1.6hdi-photo.webp"],
+      "sold": false
+    }
+  ]
+}

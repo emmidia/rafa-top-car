@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Rafa Top Car — Compra e Venda de Usados em Vagos</title>
+<meta name="description" content="Compra e venda de carros e motas usados em Santo António de Vagos. Carro em perfeito estado, com garantia. Fale connosco pelo WhatsApp.">
+<link rel="icon" href="assets/rafa-logo.jpg">
+<style>
+body{margin:0;background:#0b0b0b;font-family:Inter,system-ui,sans-serif}
+.rtc-h1,.rtc-h2,.rtc-h3{font-family:Oswald,sans-serif;text-transform:uppercase;margin:0}
+.rtc-btn{border:none;cursor:pointer;font-family:Inter,sans-serif;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.rtc-select{font-family:Inter,sans-serif;font-size:12px;font-weight:600;border-radius:6px;padding:9px 14px;cursor:pointer;background:#161616;border:1px solid #2a2a2a;color:#ccc}
+.chip{cursor:pointer;font-size:12px;font-weight:600;padding:8px 16px;border-radius:20px;border:1px solid #333;background:transparent;color:#ccc}
+.chip.active{background:#d81f26;color:#fff;border-color:#d81f26;font-weight:700}
+.card{background:#161616;border:1px solid #262626;border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{position:relative;aspect-ratio:1;overflow:hidden}
+.card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.card .ph:hover img{transform:scale(1.06)}
+.sortbtn{cursor:pointer;background:#0f0f0f;color:#ccc;border:1px solid #333;font-size:12px;padding:10px 12px;border-radius:5px;justify-content:flex-start}
+.sortbtn.active{background:#d81f26;color:#fff;border-color:#d81f26}
+a{color:#d81f26}
+a:hover{color:#ef4b4b}
+</style>
+</head>
+<body>
+<div style="background:#0b0b0b;min-height:100vh">
+
+<header style="display:flex;align-items:center;justify-content:space-between;padding:14px clamp(16px,4vw,40px);background:#0b0b0b;border-bottom:1px solid #262626;flex-wrap:wrap;gap:12px;row-gap:12px">
+<div style="display:flex;align-items:center;gap:12px">
+<img src="assets/rafa-logo.jpg" alt="Rafa Top Car" style="height:44px;width:44px;object-fit:cover;border-radius:50%;border:2px solid #d81f26">
+<div class="rtc-h2" style="color:#fff;font-size:17px">RAFA TOP CAR</div>
+</div>
+<nav style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;row-gap:10px">
+<a href="index.html" style="text-decoration:none;color:#eee;font-size:14px;font-weight:600">Estoque</a>
+<a href="Rafa Top Car - Avalie seu Carro.dc.html" style="text-decoration:none;color:#eee;font-size:14px;font-weight:600">Avalie seu Carro</a>
+<a href="Rafa Top Car - Contacto.dc.html" style="text-decoration:none;color:#eee;font-size:14px;font-weight:600">Contacto</a>
+<a href="https://wa.me/351912910662?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rafa%20Top%20Car%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" class="rtc-btn" style="background:#25D366;color:#fff;padding:9px 18px;border-radius:24px;font-size:13px;text-decoration:none"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" style="width:16px;height:16px">912 910 662</a>
+</nav>
+</header>
+
+<section style="padding:34px clamp(16px,4vw,40px) 10px;text-align:center">
+<div class="rtc-h1" style="color:#fff;font-size:clamp(22px,5.5vw,32px)">CARRO EM PERFEITO ESTADO COM GARANTIA ‼️</div>
+<p style="color:#999;font-size:14px;margin:8px 0 0">✨ Compra e venda de usados · Santo António de Vagos, Portugal</p>
+</section>
+
+<section id="chips" style="display:flex;gap:10px;padding:22px clamp(16px,4vw,40px) 0;flex-wrap:wrap"></section>
+
+<section style="display:flex;gap:10px;padding:16px clamp(16px,4vw,40px) 8px;flex-wrap:wrap">
+<select id="selMarca" class="rtc-select"></select>
+<select id="selAno" class="rtc-select"></select>
+<select id="selPreco" class="rtc-select">
+<option value="Todos">Preço: Todos</option>
+<option value="ate3000">Até €3.000</option>
+<option value="3000a8000">€3.000 – €8.000</option>
+<option value="acima8000">Acima de €8.000</option>
+</select>
+</section>
+
+<section style="display:flex;flex-wrap:wrap;gap:20px;padding:10px clamp(16px,4vw,40px) 50px;align-items:flex-start;max-width:1400px;margin:0 auto">
+<aside style="flex:1 1 180px;background:#161616;border:1px solid #2a2a2a;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:10px;position:sticky;top:16px">
+<div class="rtc-h3" style="color:#fff;font-size:12px;letter-spacing:.08em">ORDENAR POR PREÇO</div>
+<div id="sortAsc" class="rtc-btn sortbtn active">↑ Mais barato primeiro</div>
+<div id="sortDesc" class="rtc-btn sortbtn">↓ Mais caro primeiro</div>
+<div id="countLabel" style="color:#666;font-size:11px;margin-top:4px"></div>
+</aside>
+<div id="grid" style="flex:3 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px"></div>
+</section>
+
+<section style="padding:30px clamp(16px,4vw,40px);background:#d81f26;text-align:center">
+<div class="rtc-h2" style="color:#0b0b0b;font-size:20px;margin-bottom:12px">QUER AVALIAR O SEU CARRO NA TROCA?</div>
+<a href="Rafa Top Car - Avalie seu Carro.dc.html" class="rtc-btn" style="background:#0b0b0b;color:#fff;padding:12px 26px;border-radius:24px;font-size:14px;text-decoration:none">Avalie o seu carro →</a>
+</section>
+
+<footer style="padding:20px clamp(16px,4vw,40px);background:#0b0b0b;text-align:center;color:#888;font-size:12px;border-top:1px solid #262626">
+Rua Dr António dos Santos 81, 3850-830 Santo António de Vagos · 912 910 662
+</footer>
+
+<a href="https://wa.me/351912910662?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rafa%20Top%20Car%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" style="position:fixed;right:20px;bottom:20px;z-index:50;background:#25D366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.4)"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="WhatsApp" style="width:28px;height:28px"></a>
+
+</div>
+
+<script>
+const CATEGORIAS = ['Todos', 'Carros', 'Motas', 'Diesel', 'Gasolina'];
+const state = { categoria: 'Todos', marca: 'Todas', ano: 'Todos', preco: 'Todos', sort: 'asc' };
+let ALL = [];
+
+const fmtNum = n => n.toLocaleString('pt-PT');
+const fmtKm = km => fmtNum(km) + ' km';
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+fetch('cars.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(data => { ALL = data.vehicles || []; buildFilters(); render(); })
+  .catch(() => {
+    document.getElementById('grid').innerHTML =
+      '<div style="grid-column:1/-1;text-align:center;padding:40px;color:#777;font-size:13px">Não foi possível carregar os veículos. Atualize a página.</div>';
+  });
+
+function buildFilters() {
+  const chips = document.getElementById('chips');
+  chips.innerHTML = CATEGORIAS.map(c =>
+    `<div class="chip${c === state.categoria ? ' active' : ''}" data-cat="${c}">${c}</div>`).join('');
+  chips.querySelectorAll('.chip').forEach(el =>
+    el.onclick = () => { state.categoria = el.dataset.cat; buildFilters(); render(); });
+
+  const marcas = [...new Set(ALL.map(c => c.brand))].sort();
+  document.getElementById('selMarca').innerHTML =
+    '<option value="Todas">Marca: Todas</option>' + marcas.map(m => `<option${m === state.marca ? ' selected' : ''}>${esc(m)}</option>`).join('');
+
+  const anos = [...new Set(ALL.map(c => c.year))].sort();
+  document.getElementById('selAno').innerHTML =
+    '<option value="Todos">Ano: Todos</option>' + anos.map(a => `<option${String(a) === state.ano ? ' selected' : ''}>${a}</option>`).join('');
+}
+
+document.getElementById('selMarca').onchange = e => { state.marca = e.target.value; render(); };
+document.getElementById('selAno').onchange = e => { state.ano = e.target.value; render(); };
+document.getElementById('selPreco').onchange = e => { state.preco = e.target.value; render(); };
+document.getElementById('sortAsc').onclick = () => setSort('asc');
+document.getElementById('sortDesc').onclick = () => setSort('desc');
+
+function setSort(s) {
+  state.sort = s;
+  document.getElementById('sortAsc').classList.toggle('active', s === 'asc');
+  document.getElementById('sortDesc').classList.toggle('active', s === 'desc');
+  render();
+}
+
+function matchesPreco(price, f) {
+  if (f === 'ate3000') return price <= 3000;
+  if (f === '3000a8000') return price > 3000 && price <= 8000;
+  if (f === 'acima8000') return price > 8000;
+  return true;
+}
+
+function render() {
+  let list = ALL.filter(c => {
+    const tags = [c.category, c.fuel];
+    if (state.categoria !== 'Todos' && !tags.includes(state.categoria)) return false;
+    if (state.marca !== 'Todas' && c.brand !== state.marca) return false;
+    if (state.ano !== 'Todos' && String(c.year) !== state.ano) return false;
+    return matchesPreco(c.price, state.preco);
+  });
+  list.sort((a, b) => state.sort === 'asc' ? a.price - b.price : b.price - a.price);
+
+  document.getElementById('countLabel').textContent = `${list.length} de ${ALL.length} veículos`;
+
+  const grid = document.getElementById('grid');
+  if (!list.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px 20px;color:#777;font-size:13px">Nenhum veículo encontrado com estes filtros.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(c => {
+    const badge = c.sold ? 'VENDIDO' : c.badge;
+    return `
+    <div class="card">
+      <a class="ph" href="veiculo.html?id=${encodeURIComponent(c.id)}" style="display:block">
+        <img src="${esc(c.photos[0] || '')}" alt="${esc(c.name)}" loading="lazy">
+        ${badge ? `<div style="position:absolute;top:8px;left:8px;background:${c.sold ? '#555' : '#d81f26'};color:#fff;font-size:9px;font-weight:700;padding:3px 7px;border-radius:3px">${esc(badge)}</div>` : ''}
+      </a>
+      <div style="padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div>
+          <div style="color:#fff;font-size:12px;font-weight:700">${esc(c.name)}</div>
+          <div style="color:#999;font-size:10px;margin-top:2px">${c.year} · ${fmtKm(c.km)}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#d81f26;font-size:13px;font-weight:700">€${fmtNum(c.price)}</div>
+          <a href="veiculo.html?id=${encodeURIComponent(c.id)}" style="color:#ccc;font-size:10px;text-decoration:none;border:1px solid #333;padding:3px 7px;border-radius:4px;display:inline-block;margin-top:3px">Ver</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+</script>
+</body>
+</html>
