@@ -8,6 +8,20 @@
       "year": 2022,
       "km": 208000,
       "price": 27900,
+      "id": "bmw-420d-coupe-2022-cq66",
+      "sold": false,
+      "photos": [
+        "assets/cars/bmw-420d-coupe-2022-cq66-1.jpg"
+      ]
+    },
+    {
+      "name": "BMW 420d Coupé",
+      "brand": "BMW",
+      "category": "Carros",
+      "fuel": "Diesel",
+      "year": 2022,
+      "km": 208000,
+      "price": 27900,
       "id": "bmw-420d-coupe-2022-cd7o",
       "sold": false,
       "photos": [
