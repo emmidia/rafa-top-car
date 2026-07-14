@@ -1,36 +1,6 @@
 {
   "vehicles": [
     {
-      "name": "BMW 318d Carrinha",
-      "brand": "BMW",
-      "category": "Carros",
-      "fuel": "Diesel",
-      "year": 2014,
-      "km": 255000,
-      "price": 12900,
-      "gearbox": "Automática",
-      "id": "bmw-318d-carrinha-2014-ya8d",
-      "sold": false,
-      "photos": [
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-1.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-2.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-3.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-4.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-5.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-6.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-7.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-8.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-9.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-10.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-11.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-12.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-13.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-14.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-15.jpg",
-        "assets/cars/bmw-318d-carrinha-2014-ya8d-16.jpg"
-      ]
-    },
-    {
       "id": "smart-fortwo-2001",
       "name": "Smart Fortwo Coupé",
       "brand": "Smart",
