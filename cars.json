@@ -1,6 +1,20 @@
 {
   "vehicles": [
     {
+      "name": "BMW 420d Coupé",
+      "brand": "BMW",
+      "category": "Carros",
+      "fuel": "Diesel",
+      "year": 2022,
+      "km": 208000,
+      "price": 27900,
+      "id": "bmw-420d-coupe-2022-0rsz",
+      "sold": false,
+      "photos": [
+        "assets/cars/bmw-420d-coupe-2022-0rsz-1.jpg"
+      ]
+    },
+    {
       "id": "smart-fortwo-2001",
       "name": "Smart Fortwo Coupé",
       "brand": "Smart",
