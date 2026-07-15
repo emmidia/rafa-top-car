@@ -1,6 +1,28 @@
 {
   "vehicles": [
     {
+      "name": "Mercedes-Benz CLA 45 AMG Shooting Brake",
+      "brand": "Mercedes-Benz",
+      "category": "Carros",
+      "fuel": "Gasolina",
+      "year": 2015,
+      "km": 140000,
+      "price": 26680,
+      "gearbox": "Automática",
+      "equipment": [
+        "Motor 2.0 Turbo AMG 360 cv",
+        "Tração integral 4MATIC",
+        "Caixa AMG Speedshift"
+      ],
+      "description": "Vende-se Mercedes-Benz CLA 45 AMG Shooting Brake de 2015, uma combinação perfeita entre performance desportiva, elegância e versatilidade. Equipado com o reconhecido motor 2.0 Turbo AMG de 360 cv e tração integral 4MATIC, oferece uma condução emocionante, acelerações impressionantes e um comportamento dinâmico de excelência, sem abdicar do conforto e da praticidade de uma carrinha. O veículo encontra-se em excelente estado geral, tanto de mecânica como de interiores e carroçaria. Manutenção cuidada.",
+      "id": "mercedes-benz-cla-45-amg-shooting-brake-2015-ue51",
+      "sold": false,
+      "photos": [
+        "assets/cars/mercedes-benz-cla-45-amg-shooting-brake-2015-ue51-1.jpg",
+        "assets/cars/mercedes-benz-cla-45-amg-shooting-brake-2015-ue51-2.jpg"
+      ]
+    },
+    {
       "id": "smart-fortwo-2001",
       "name": "Smart Fortwo Coupé",
       "brand": "Smart",
